@@ -1,0 +1,43 @@
+.weather {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    width: 180px;
+    //min-height: 180px;
+    text-align: left;
+    max-height: 500px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.weather.hidden {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.weather__input {
+    width: 170px;
+    height: 34px;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.weather__icon {
+    font-size: 44px;
+}
+
+.weather__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+}
+
+.weather__description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 12px;
+}

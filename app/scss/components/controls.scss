@@ -1,0 +1,47 @@
+.arrow-right,
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    opacity: .8;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out, height 1s ease-in-out;
+    transform: translateY(-50%);
+
+    &:hover,
+    &:focus {
+        opacity:1;
+        outline: 0;
+    }
+
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+.arrow-left {
+    left: 20px;
+}
+
+.slider {
+    max-height: 100px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.slider.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+    .arrow-right,
+    .arrow-left {
+        height: 0;
+        overflow: hidden;
+    }
+}

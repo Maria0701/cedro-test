@@ -1,0 +1,24 @@
+.header {
+    padding: 20px;
+}
+
+.header__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 510px) {
+    .header__weather {
+        margin-left: auto;
+        order: -1;
+    }
+}
+
+@media (min-width: 510px) {
+    .header {
+        height: 30vh;
+    }
+}

@@ -1,0 +1,70 @@
+.app-state {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #cecece;
+}
+
+.app-state__label  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 2;
+    border-bottom: 1px solid #cecece;
+	opacity: 0.8;
+	transition: opacity 0.3s ease-in-out;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+}
+
+.app-state__check{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.app-state__check-fake {
+	cursor: pointer;
+	width: 36px;
+	height: 20px;
+	background-color: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.app-state__check-fake:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.app-state__label.on .app-state__check-fake,
+.app-state__check:checked + .app-state__check-fake {
+	background: #bada55;
+}
+
+.app-state__label.on .app-state__check-fake:after,
+.app-state__check:checked + .app-state__check-fake:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+.app-state__check-fake:active:after {
+	width: 36px;
+}

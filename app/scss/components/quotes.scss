@@ -1,0 +1,47 @@
+.quotes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+    text-align: center;
+    align-items: flex-end;
+    max-height: 300px;
+    transition: max-height 1s ease-in-out;
+}
+
+.quotes.hidden {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.quotes.visible {
+    animation: formdrop 0.3s ease-in-out;
+}
+
+.quotes__change {
+    width: 32px;
+    height: 32px;
+    opacity: .8;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.quotes__quote {
+    min-height: 32px;
+}
+
+.quotes__author {
+    min-height: 20px;
+}
