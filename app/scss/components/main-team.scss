@@ -1,0 +1,37 @@
+.team-slider {
+    position: relative;
+}
+.slider__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.team-slider__wrapper {
+    width: 100%;
+}
+
+.team-pagination.swiper-pagination-bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: unset;
+    top: var(--padding);
+    left: var(--padding);
+    line-height: 0;
+
+    .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+        background-color: var(--white);
+        opacity: 0.64
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+}
+
+.team-pagination-next,
+.team-pagination-prev {
+    display: none;
+}

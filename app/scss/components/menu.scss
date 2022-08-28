@@ -1,0 +1,103 @@
+.menu__wrapper {
+    flex-grow: 1;
+}
+
+.menu__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-right: var(--padding);
+}
+
+.menu__link {
+    padding-left: var(--padding);    
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.menu__list-sub {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.menu__sub-toggler {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #4D4D4D;
+    border-radius: 50%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 6px;
+        height: 1.5px;
+        background-color: var(--white);
+        transform: translate(-50%, -50%);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.5px;
+        height: 6px;
+        background-color: var(--white);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.menu__item.opened {
+    padding-bottom: 0;
+}
+
+.menu__item.opened > .menu__link{
+    color: var(--bg-corporate);
+}
+
+.menu__item.opened .menu__sub-toggler::before  {
+    height: 0px;
+}
+
+.menu__item.opened .menu__list-sub {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 24px;
+    height: auto;
+    max-height: 1000px;
+    border-top: 1px solid #4D4D4D;
+    border-bottom: 1px solid #4D4D4D;
+    overflow: hidden;
+}
+
+.menu__list-sub {
+    height: 100px;
+    max-height: 0;
+    transition: all .8s cubic-bezier(.165,.84,.44,1) .6s;
+}

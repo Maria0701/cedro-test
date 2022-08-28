@@ -1,0 +1,28 @@
+.main-why {
+    max-width: 100%;
+    background-color: var(--bg-primary);
+}
+
+.main-why__container {
+    padding-top: 64px;
+}
+
+.main-why__name {
+    margin: 0;
+    margin-bottom: 40px;
+    color: var(--white);
+    font-family: 'Druk Cyr';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.main-why__slider {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+

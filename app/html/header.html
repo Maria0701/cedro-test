@@ -1,4 +1,76 @@
 <header class="header">
     <div class="header__container">
+        <div class="header__top-wrapper container">
+            <a class="header__logo logo" href="/" title="main-page">
+                <img src="../img/logo.svg" alt="logo" class="logo__img" width="69" height="12">
+            </a>
+            <button class="header__toggler btn" aria-label="open menu">
+                <span class="header__toggler-img">
+                    <svg class="header__op" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 2.25H1V3.75L15 3.75V2.25ZM1 7.25H15V8.75H1V7.25ZM1 12.25H15V13.75H1V12.25Z" fill="#2E2E2E"/>
+                    </svg>     
+                    <svg class="header__close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.93954 8.00014L2.52041 12.4193L3.58107 13.4799L8.0002 9.0608L12.4195 13.4801L13.4802 12.4195L9.06086 8.00014L13.4806 3.58044L12.4199 2.51978L8.0002 6.93949L3.58068 2.51997L2.52002 3.58063L6.93954 8.00014Z" fill="#2E2E2E"/>
+                    </svg>               
+                </span>
+                <span class="header__toggler-name header__op">
+                    Меню
+                </span>
+                <span class="header__toggler-name header__close">
+                    Закрыть
+                </span>
+            </button>
+        </div>
+        <div class="header__menu menu">
+            <nav class="menu__wrapper">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--has-sub">
+                        <a href="#" class="menu__link">Управление недвижимостью</a>
+                        <button class="menu__sub-toggler btn" aria-label="Open submenu"></button>
+                        <ul class="menu__list-sub">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Технический аудит недвижимости</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Эксплуатация и техническое обслуживание недвижимости</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Пожарная безопасность</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Клининг</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Управление арендными отношениями</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Аварийно-диспетчерская служба</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Продажа и аренда</a>
+                    </li>
+                    <li class="menu__item  menu__item--has-sub">
+                        <a href="#" class="menu__link">Консалтинг</a>
+                        <button class="btn menu__sub-toggler btn" aria-label="Open submenu"></button>
+                        <ul class="menu__list-sub">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Бухгалтерские и кадровые услуги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Юридическое сопровождение</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="header__callback" title="Связаться с нами">
+                <span>Связаться с нами</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E" stroke-width="1.5" stroke-linejoin="bevel"/>
+                </svg>                    
+            </a>
+        </div>
     </div>
 </header>
